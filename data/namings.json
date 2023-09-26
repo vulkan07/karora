@@ -1,0 +1,71 @@
+{
+	"groups" : {
+		"ALL": "Mindenki",
+		"INF": "Infó",
+		"MED": "Média",
+
+		"BOY": "Fiúk",
+		"GIR": "Lányok",
+
+		"FRA": "Francia",
+		"OLA": "Olasz",
+		"SP1": "Spanyol Kezdő",
+		"SP2": "Spanyol Haladó",
+		"NM1": "Német Kezdő",
+		"NM2": "Német Haladó"
+	},
+
+	"teachers": {
+		"LÉP": "Lépesfalvi Dávid",
+		"KIL": "Kila József",
+		"NMA": "Németh Magdolna",
+		"OLL": "Oliveira-László Linda",
+		"VAP": "Paksi Tünde",
+		"MOS": "Motyovszki Sára",
+		"MOL": "Molnár László",
+		"VIL": "Villányi Péter",
+		"VÁR": "Váradi Emese",
+		"CSA": "Csabai Anita",
+		"FEB": "Ferencei Boglárka",
+		"ALB": "Albert Viktória",
+		"MOH": "Mohai Tibor",
+		"MBD": "Magyarné Biczók Diána",
+		"AMY": "Amy Seibert",
+		"SZO": "SZO",
+
+		"SZA": "Szappanos Mária",
+		"TRC": "Tóthné Radó Cecilia",
+		"GZS": "Gazsó Melinda",
+		"BIÓ": "Bálint Ildikó",
+		"GNY": "Gönye Anikó",
+		"KOP": "Papp Ida"
+	},
+
+	"subjects": {
+		"OFO": "Ofő",
+		"TES": "Tesi",
+		"SPO": "Sportkör",
+
+		"MAT": "Matek",
+		"MAG": "Magyar",
+		"ANG": "Angol",
+		"ACV": "Aciv",
+		"INF": "Infó",
+		"MED": "Média",
+		
+		"TOR": "Töri",
+		"FOL": "Föci",
+		"FIZ": "Fizika",
+		"BIO": "Biosz",
+		"KEM": "Kémia",
+		"RAJ": "Rajz",
+		"ENE": "Ének",
+
+		"FRA": "Francia",
+		"OLA": "Olasz",
+		"SP1": "Spanyol",
+		"SP2": "Spanyol+",
+		"NM1": "Német",
+		"NM2": "Német+"
+	}
+}

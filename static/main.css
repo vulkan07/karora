@@ -1,0 +1,250 @@
+:root {
+	/* PROXIES */
+	--main-bg: #FFFFFF;
+	--panel-bg: #2c3e50;
+	--panel-text: #fff4dd;
+	--panel-text-2: #ff9c77;
+	--lunch: #b26b43;
+	--lesson-border: #c0c8d1;
+	--lesson-bg: #ffffff; /*not working bruh*/
+	--lesson-bg-selected: #f8ede5; /*nuhuh*/
+	--lesson-border-selected: #bc7b7b;
+	--dropdown-bg: #4f606b;
+	--teacher-tooltip-bg: #bc7b7b;
+	--teacher-tooltip-text: #FFFFFF;
+	--form-border: #4f606b;
+	--button-bg: #4f606b;
+	--button-text: #ff9c77;
+  }
+
+button {
+	border: none;
+	border-radius: 4px;
+	color: var(--button-text);
+	background: var(--button-bg);
+	transition: all 0.1s ease;
+}
+button:hover {
+	border: none;
+	border-radius: 0px;
+	color: var(--button-bg);
+	background: var(--button-text);
+}
+
+input {
+	color: #00ff00;
+}
+
+
+body {
+	margin: 0;
+	font-family: "Lato", sans-serif;
+	background: var(--main-bg);
+	user-select: none;
+}
+
+.hidden {
+	display: none;
+}
+
+.editorSidepane {
+	right: -310;
+	top: 0;
+	background: var(--panel-bg);
+	height: 100%;
+	width: 240px;
+	position: fixed;
+	transition: all 0.3s ease;
+}
+#editorTitle {
+	margin-bottom:5px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 2em;
+	color: var(--panel-text);
+}
+#editorSubTitle {
+	margin-top:0;
+	margin-bottom:0;
+	text-align: center;
+	font-size: 1.6em;
+	color: var(--panel-text-2);
+
+}
+
+#editorSubTitle2 {
+	margin-top:0;
+	text-align: center;
+	font-size: 1.2em;
+	color: grey;
+}
+.open {
+	right:0;
+}
+
+
+label {
+	color: var(--panel-text-2);
+}
+
+.editorField {
+	color: var(--panel-text);
+	background: var(--button-bg);
+	border: none;
+	margin-top: 7px;
+	margin-bottom: 20px;
+	min-width: 180px;
+	min-height: 26px;
+	padding: 6px;
+}
+
+select {
+	border: none;
+	background: var(--dropdown-bg);
+}
+
+#timetable {
+	/* cannot use 'auto' for centering because then animations wont work*/
+	margin-left: calc((100vw - 1310px) / 2);
+	margin-right: calc((100vw - 1310px) / 2);
+	padding-top: 10;
+	padding-bottom: 30;
+	transition: all 0.25s ease;
+
+}
+#timetable.pushleft {
+	margin-left: 0;
+}
+
+
+th {
+	padding: 5px 20px 5px 20px;
+	font-size: 1.3em;	
+	font-weight: bold;
+}
+
+#title {
+	font-size: 2em;
+	font-weight: bold;
+	text-align: center;
+	background: var(--panel-bg);
+	color: var(--panel-text);
+	padding: 5;
+	box-shadow: 0 00px 8px 0 var(--panel-bg);
+}
+
+.period {
+	width: 240px;
+	height: 100px;
+	display: flex;
+
+	margin-right: 7px; /* Gap between columns */
+	justify-content: space-between;
+}
+
+
+.lessonDiv.nolesson {
+	padding-top: 0;
+	flex: 1;
+	color: #00000000;
+	border: none;
+	box-shadow: 0 00px 4px 0 #444444DD;
+}
+.lessonDiv.nolesson:hover {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 2em;
+	color: #c2c2c2;
+	box-shadow: 0 00px 4px 0 #646464DD;
+}
+
+.lessonDiv {
+	padding-top: 8px;
+	flex: 1;
+	background: var(--lesson-bg);
+	border: solid 3px var(--lesson-border);
+	border-radius: 5px;
+	box-shadow: 0 00px 4px 0 #44444444;
+}
+
+.lessonDiv:hover {
+	border-color: var(--lesson-border-selected);
+}
+
+.lessonTitle {
+	padding:3px;
+	font-weight: bold;
+	font-size: 1.45em;
+	text-align: center;
+}
+
+.groupName {
+	padding-top:4px;
+	padding-bottom:8px;
+	color: #aaaaaa;
+	font-size: .85em;
+	text-align: center;
+}
+
+.lessonMsg {
+	text-align: center;
+}
+
+.smallerText  {
+	display:flex;
+	font-size: .85em;			
+	bottom:0;
+}
+
+.teacher, .room {
+	text-align: center;
+	width: 49%;
+}
+
+.selected {
+	background:var(--lesson-bg-selected);
+	border-color:var(--lesson-border-selected);
+}
+
+.teacher-tooltip{
+	visibility: hidden;
+	position: absolute;
+	z-index: 2;
+	font-size: 0px;
+	background: var(--teacher-tooltip-bg); 
+	color: var(--teacher-tooltip-text); 
+	border-radius: 10px;
+	padding: 5px 10px 5px 10px;
+	transform: translate(-38%, 22px);
+	transition: 0.12s;
+	box-shadow: 0 00px 5px 0 #444444DD;
+}
+
+.lessonDiv:hover .teacher-tooltip {
+	visibility: visible;
+	font-size: 16px;
+}
+
+button {
+	font-size: 1.05em;
+	width: 38px;
+	padding: 5px 8px 5px 8px;
+	margin: 3px;
+}
+
+form {
+	margin: auto;
+	padding: 10px;
+	border: 3px solid var(--form-border);
+	border-radius: 4px;
+}
+
+.lunchbar {
+	width: 100%;
+	height:5px;
+	transform: translateY(10px);
+	background: var(--lunch);
+	border-radius: 3px;
+}
+

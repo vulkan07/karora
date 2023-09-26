@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+
+	<body onload="onLoadPage()">
+		<div>
+			<div id="title"></div>
+			<template id="lessonTemplates">
+				
+				<div class="lessonDiv nolesson" onclick="onClickEmptyLesson(this)">+</div>
+				
+				<div class="lessonDiv normal" onclick="onClickLesson(this)">
+					<div class="lessonTitle"></div>
+					<div class="groupName"></div> 
+					<div style="display:flex; justify-content: center;">
+						<div class="teacher"><span class="teacher-tooltip"></span></div>
+						<div class="room"></div>
+					</div>
+				</div>
+				
+				<table id="timeTable" class="hidden">
+					<tr>
+						<th></th>
+						<th>Hétfő</th>
+						<th>Kedd</th>
+						<th>Szerda</th>
+						<th>Csütörtök</th>
+						<th>Péntek</th>
+					</tr>
+				</table>
+				
+			</template>
+			
+			<div id= "timeTableDiv"></div>
+			
+			<div class="editorSidepane" style="padding:20px">
+				<p id="editorTitle">Szerkesztés</p>
+				<p id="editorSubTitle"></p>
+				<p id="editorSubTitle2">1</p>
+				<div style="padding-bottom:15px">
+					<button><i class="fa fa-check"></i></button>
+					<button><i class="fa fa-plus"></i></button>
+					<button onClick="onDelLesson()"><i class="fa fa-trash"></i></button>
+					<button onClick="window.open('https://www.karinthy.hu/web/iskolankrol/tanaraink/tanaraink.html');"><i class="fa fa-users"></i></button>
+				</div>
+				
+				<form id="editorForm" method="POST" action="/api/setLesson">
+					<input type="hidden" id="day" name="day" value="-1">
+					<input type="hidden" id="period" name="period" value="-1">
+					<input type="hidden" id="lesson" name="lesson" value="-1">
+					
+					<label for="subject">TANTÁRGY</label><br>
+					<select class="editorField" name="subject" id="subject"></select><br>
+					
+					<label for="group">CSOPORT</label><br>
+					<select class="editorField" name="group" id="group"></select><br>
+					
+					<label for="teacher">TANÁR</label><br>
+					<select class="editorField" name="teacher" id="teacher"></select><br>
+					
+					<label for="room">TEREM</label><br>
+					<input class="editorField" type="input" id="room" name="room"><br>
+					
+					<label for="lunch">EBÉD</label>
+					<input class="editorField" type="checkbox" id="lunch" name="lunch"><br>
+					
+					<!--<input type="submit" value="OK" style="margin-top:20px">--!>
+				</form>
+			</div>
+		</div>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
+</html>
